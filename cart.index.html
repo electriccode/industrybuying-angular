@@ -1,0 +1,30 @@
+<div class="col-md-3" ng-if="cartItems.length > 0">
+  <div class="panel panel-default panel-summary">
+    <h2>Your cart summary</h2>
+    <table class="table">
+      <tr>
+        <th>Items in cart</th>
+        <th>Total ₹</th>
+      </tr>
+      <tr>
+        <td>{{cartItems.length}}</td>
+        <td>{{cartItemsTotal}}</td>
+      </tr>
+    </table>
+    <hr>
+    <table class="table">
+      <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Total ₹</th>
+      </tr>
+      <tr ng-repeat="cartItem in cartItems">
+        <td>{{cartItem.brand}}'s {{cartItem.name}}</td>
+        <td>{{cartItem.quantity}}</td>
+        <td>{{cartItem.quantity * cartItem.price}}</td>
+        <td><button ng-click="remove(cartItem)" class="btn btn-danger btn-xs">Remove</button></td>
+      </tr>
+    </table>
+    <button ng-click="clearCart()" class="btn btn-danger">Clear Cart</button>
+  </div>
+</div>

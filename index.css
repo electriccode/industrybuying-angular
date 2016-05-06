@@ -1,0 +1,39 @@
+.panel-product-image {
+  background-repeat: no-repeat;
+  min-height: 200px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+.panel-product {
+  text-align: center;
+  padding: 1em;
+}
+
+.panel-product-price {
+  font-weight: bold;
+}
+
+.panel-product-image {
+  margin-bottom: 5px;
+}
+
+.panel-summary {
+  padding: 1em;
+}
+
+.panel-stepper {
+  border: 1px solid #ddd;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.panel-stepper span {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.row-products {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}

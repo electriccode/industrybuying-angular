@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="col-md-12">
+    <h1>Masala & Spices</h1>
+    <h4>{{products.length}} Items</h4>
+  </div>
+  <div class="row">
+    <div class="col-md-9 row-products">
+      <div class="col-md-4" ng-repeat="product in products">
+        <div class="panel panel-product panel-default">
+          <div class="panel-product-image" style="background-image:url(data/{{product.image}})"></div>
+          <p>{{product.brand}}</p>
+          <h4>{{product.name}}</h4>
+          <h5>{{product.packing}}</h5>
+          <h3 class="panel-product-price">₹ {{product.price}}</h3>
+          <button class="btn btn-primary" ng-if="!product.quantity" ng-click="addToCart(product)">Add to Cart</button>
+          <div class="panel panel-stepper" ng-if="product.quantity > 0">
+            <button class="btn btn-success" ng-click="addToCart(product)">+</button>
+            <span>{{ product.quantity }} in cart</span>
+            <button class="btn btn-danger" ng-click="removeFromCart(product)">-</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div ui-view></div>
+  </div>
+</div>

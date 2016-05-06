@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1
+    , "image": "asafoetida.jpg"
+    , "brand": "ABC Masala"
+    , "name": "Asafoetida"
+    , "packing": "50gm pouch"
+    , "price": 100
+  }
+  , {
+    "id": 2
+    , "image": "cardamom.jpg"
+    , "brand": "IIT Masale"
+    , "name": "Cardamom"
+    , "packing": "100gm pouch"
+    , "price": 250
+  }
+  , {
+    "id": 3
+    , "image": "cloves.png"
+    , "brand": "Goldie Spices"
+    , "name": "Cloves"
+    , "packing": "100gm pouch"
+    , "price": 75
+  }
+  , {
+    "id": 4
+    , "image": "red-chilli.jpg"
+    , "brand": "MDH Masale"
+    , "name": "Red Chilli"
+    , "packing": "250gm pouch"
+    , "price": 120
+  }
+  , {
+    "id": 5
+    , "image": "sesame.jpg"
+    , "brand": "American Tadka"
+    , "name": "Sesame"
+    , "packing": "250gm pouch"
+    , "price": 190
+  }
+  , {
+    "id": 6
+    , "image": "turmeric.jpg"
+    , "brand": "MDH Masale"
+    , "name": "Turmeric"
+    , "packing": "250gm pouch"
+    , "price": 75
+  }
+]
