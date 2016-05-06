@@ -23,11 +23,13 @@ var productController = function($scope, $localStorage, appProductService, appCa
   }
   $scope.$watch(function() {return $localStorage.cartItems}, function(newValue, oldValue) {
     // Update when cart is cleared
-    if(newValue.length == 0) {
-      if(typeof $scope.products.length !== 'undefined') {
-        $scope.products.forEach(function(p,i) {
-          p.quantity = 0;
-        })
+    if(typeof newValue !== 'undefined') {
+      if(newValue.length == 0) {
+        if(typeof $scope.products.length !== 'undefined') {
+          $scope.products.forEach(function(p,i) {
+            p.quantity = 0;
+          })
+        }
       }
     }
   })

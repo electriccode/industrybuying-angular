@@ -11,9 +11,13 @@ var cartService = function($localStorage) {
   }
 
   function get(product) {
-    return Array.prototype.filter.call($localStorage.cartItems, function(ci) {
-      if(ci.id == product.id) return ci;
-    });
+    if($localStorage.cartItems) {
+      return Array.prototype.filter.call($localStorage.cartItems, function(ci) {
+        if(ci.id == product.id) return ci;
+      });
+    } else {
+      return [];
+    }
   }
 
   function total() {
