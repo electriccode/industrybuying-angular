@@ -52,9 +52,16 @@ var cartService = function($localStorage) {
   function remove(product, callback) {
     if(typeof $localStorage.cartItems !== 'undefined' && $localStorage.cartItems.length > 0) {
       var existingCartItem = get(product);
-      if(existingCartItem[0].quantity == 0) {
+      if(existingCartItem[0].quantity <= 1) {
         $localStorage.cartItems = Array.prototype.filter.call($localStorage.cartItems, function(p) {
           if(product.id != p.id)  return p;
+        })
+      } else {
+        $localStorage.cartItems = Array.prototype.filter.call($localStorage.cartItems, function(p) {
+          if(product.id == p.id)  {
+            p.quantity--;
+          }
+          return p;
         })
       }
       existingCartItem[0] = product
